@@ -13,6 +13,9 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <!-- ScrollReveal JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <!-- Custom Fonts -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
@@ -51,11 +54,11 @@
     <nav class="w-full bg-slate-950/80 backdrop-blur-md border-b border-purple-900/30 fixed top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-2 sr-nav">
                     <img src="logo.png" alt="iJaipuria" style="width: 145px; height: auto;">
                 </div>
                 <button onclick="scrollToPricing()"
-                    class="bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium transition-all shadow-[0_0_15px_rgba(147,51,234,0.5)]">
+                    class="sr-nav bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium transition-all shadow-[0_0_15px_rgba(147,51,234,0.5)]">
                     Register Now
                 </button>
             </div>
@@ -76,7 +79,7 @@
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
                 <!-- Left Column: Text -->
-                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                <div class="w-full lg:w-1/2 text-center lg:text-left sr-hero-text">
                     <div
                         class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/30 border border-purple-500/30 text-purple-300 text-xs font-bold mb-6 uppercase tracking-wider">
                         <span class="relative flex h-2 w-2">
@@ -115,7 +118,7 @@
                 </div>
 
                 <!-- Right Column: Visual -->
-                <div class="w-full lg:w-1/2 relative">
+                <div class="w-full lg:w-1/2 relative sr-hero-img">
                     <!-- Glow Effect -->
                     <div
                         class="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-blue-600/30 blur-3xl rounded-full opacity-40">
@@ -205,14 +208,14 @@
     <!-- Before & After Section -->
     <section class="py-20 bg-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 sr-fade-up">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Before vs After This Masterclass</h2>
                 <div class="h-1 w-20 bg-purple-600 mx-auto rounded-full"></div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
                 <!-- Before Card -->
-                <div class="bg-red-950/20 border border-red-900/50 rounded-2xl p-8 relative overflow-hidden">
+                <div class="bg-red-950/20 border border-red-900/50 rounded-2xl p-8 relative overflow-hidden sr-left">
                     <div class="absolute top-0 right-0 p-6 opacity-10">
                         <i data-lucide="alert-triangle" class="w-32 h-32 text-red-500"></i>
                     </div>
@@ -245,7 +248,7 @@
 
                 <!-- After Card -->
                 <div
-                    class="bg-green-950/20 border border-green-900/50 rounded-2xl p-8 relative overflow-hidden shadow-[0_0_40px_rgba(34,197,94,0.1)]">
+                    class="bg-green-950/20 border border-green-900/50 rounded-2xl p-8 relative overflow-hidden shadow-[0_0_40px_rgba(34,197,94,0.1)] sr-right">
                     <div class="absolute top-0 right-0 p-6 opacity-10">
                         <i data-lucide="check-circle-2" class="w-32 h-32 text-green-500"></i>
                     </div>
@@ -288,7 +291,7 @@
             <div class="grid lg:grid-cols-2 gap-12 items-start">
 
                 <!-- Section 1 -->
-                <div class="bg-slate-900/50 p-8 rounded-2xl border border-slate-800">
+                <div class="bg-slate-900/50 p-8 rounded-2xl border border-slate-800 sr-left">
                     <div class="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center mb-6">
                         <i data-lucide="target" class="w-6 h-6 text-blue-400"></i>
                     </div>
@@ -316,7 +319,7 @@
                 </div>
 
                 <!-- Section 2 -->
-                <div class="bg-slate-900/50 p-8 rounded-2xl border border-slate-800">
+                <div class="bg-slate-900/50 p-8 rounded-2xl border border-slate-800 sr-right">
                     <div class="w-12 h-12 bg-purple-900/30 rounded-lg flex items-center justify-center mb-6">
                         <i data-lucide="zap" class="w-6 h-6 text-purple-400"></i>
                     </div>
@@ -348,11 +351,11 @@
     <!-- Instructor Section -->
     <section id="instructor" class="py-20 bg-gradient-to-b from-slate-900 to-slate-950">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold text-white mb-12">Learn From Someone Who’s Done It</h2>
+            <h2 class="text-3xl font-bold text-white mb-12 sr-fade-up">Learn From Someone Who’s Done It</h2>
 
             <div
                 class="bg-slate-800/50 rounded-3xl p-8 md:p-12 border border-slate-700 flex flex-col md:flex-row items-center gap-8 md:gap-12">
-                <div class="shrink-0 relative">
+                <div class="shrink-0 relative sr-zoom">
                     <div
                         class="w-40 h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-slate-400 to-slate-600 overflow-hidden border-4 border-purple-500 shadow-[0_0_30px_rgba(168,85,247,0.4)]">
                         <img src="instructor.jpeg" alt="Rupshankar Mishra" class="w-full h-full object-cover">
@@ -363,7 +366,7 @@
                     </div>
                 </div>
 
-                <div class="text-left flex-1">
+                <div class="text-left flex-1 sr-fade">
                     <h3 class="text-2xl font-bold text-white mb-2">Rupshankar Mishra</h3>
                     <p class="text-purple-400 font-medium mb-6">Meta Ads Specialist</p>
 
@@ -390,15 +393,83 @@
         </div>
     </section>
 
+    <!-- NEW SECTION: Meta Andromeda How It Works -->
+    <section class="py-20 bg-slate-900 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+                <!-- Left Column: Text Content -->
+                <div class="w-full lg:w-1/2 sr-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                        Meta Andromeda : <span class="text-purple-400">How It Works</span>
+                    </h2>
+                    <p class="text-lg text-slate-300 mb-6 leading-relaxed">
+                        The Andromeda update isn't just a simple algorithm tweak—it's a complete hardware and software
+                        overhaul of how Meta retrieves and ranks ads.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="shrink-0 mt-1">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-blue-900/30 flex items-center justify-center text-blue-400">
+                                    <i data-lucide="layers" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Personalized Ad Retrieval</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    Advanced neural networks now filter your "Ads creative" pool in real-time to find
+                                    the best "Ad candidates" before they even enter the auction.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="shrink-0 mt-1">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-purple-900/30 flex items-center justify-center text-purple-400">
+                                    <i data-lucide="cpu" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Hardware-Accelerated Decisions</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    Powered by <strong>Meta MTIA</strong> and the <strong>NVIDIA Grace Hopper</strong>
+                                    platform, the system processes signals faster than ever. If your ad creative doesn't
+                                    match the new hardware-optimized signals, it gets ignored.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: GIF Image -->
+                <div class="w-full lg:w-1/2 sr-right">
+                    <div
+                        class="relative rounded-2xl border-2 border-purple-500/30 p-2 bg-slate-800/50 shadow-[0_0_40px_rgba(168,85,247,0.15)] backdrop-blur-sm">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur opacity-20">
+                        </div>
+                        <img src="andromeda.gif" alt="Meta Andromeda System Architecture"
+                            class="relative w-full h-auto rounded-xl shadow-inner">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials -->
     <section id="reviews" class="py-20 bg-slate-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-white mb-12">What Marketers Say After Learning This</h2>
+            <h2 class="text-3xl font-bold text-center text-white mb-12 sr-fade-up">What Marketers Say After Learning
+                This</h2>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Testimonial 1 -->
                 <div
-                    class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-colors">
+                    class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-colors sr-card">
                     <div class="flex gap-1 mb-4">
                         <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-yellow-500"></i>
                         <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-yellow-500"></i>
@@ -421,7 +492,7 @@
 
                 <!-- Testimonial 2 -->
                 <div
-                    class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-colors">
+                    class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-colors sr-card">
                     <div class="flex gap-1 mb-4">
                         <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-yellow-500"></i>
                         <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-yellow-500"></i>
@@ -444,7 +515,7 @@
 
                 <!-- Testimonial 3 -->
                 <div
-                    class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-colors">
+                    class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-colors sr-card">
                     <div class="flex gap-1 mb-4">
                         <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-yellow-500"></i>
                         <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-yellow-500"></i>
@@ -467,7 +538,7 @@
 
                 <!-- Testimonial 4 -->
                 <div
-                    class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-colors">
+                    class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-colors sr-card">
                     <div class="flex gap-1 mb-4">
                         <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-yellow-500"></i>
                         <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-yellow-500"></i>
@@ -490,7 +561,7 @@
 
                 <!-- Testimonial 5 -->
                 <div
-                    class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-colors">
+                    class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-colors sr-card">
                     <div class="flex gap-1 mb-4">
                         <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-yellow-500"></i>
                         <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-yellow-500"></i>
@@ -513,7 +584,7 @@
 
                 <!-- Testimonial 6 -->
                 <div
-                    class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-colors">
+                    class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-colors sr-card">
                     <div class="flex gap-1 mb-4">
                         <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-yellow-500"></i>
                         <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-yellow-500"></i>
@@ -545,7 +616,7 @@
 
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div
-                class="bg-slate-900 border-2 border-purple-500 rounded-3xl p-8 md:p-12 text-center shadow-[0_0_60px_rgba(147,51,234,0.3)]">
+                class="bg-slate-900 border-2 border-purple-500 rounded-3xl p-8 md:p-12 text-center shadow-[0_0_60px_rgba(147,51,234,0.3)] sr-zoom">
 
                 <div
                     class="inline-block bg-red-600 text-white text-xs font-bold px-4 py-1 rounded-full mb-6 animate-pulse">
@@ -709,6 +780,39 @@
                     stickyCta.classList.add('translate-y-full');
                 }
             });
+
+            // --- ScrollReveal Animations ---
+            const sr = ScrollReveal({
+                origin: 'bottom',
+                distance: '60px',
+                duration: 1000,
+                delay: 200,
+                // reset: true // Uncomment if you want animations to replay on scroll back up
+            });
+
+            // Header / Nav
+            sr.reveal('.sr-nav', { origin: 'top', distance: '20px', delay: 100, interval: 100 });
+
+            // Hero Section
+            sr.reveal('.sr-hero-text', { origin: 'left', distance: '60px', delay: 200 });
+            sr.reveal('.sr-hero-img', { origin: 'right', distance: '60px', delay: 400 });
+
+            // Section Titles (General Fade Up)
+            sr.reveal('.sr-fade-up', { origin: 'bottom', distance: '30px' });
+
+            // Left/Right Content Blocks
+            sr.reveal('.sr-left', { origin: 'left', distance: '50px', delay: 200 });
+            sr.reveal('.sr-right', { origin: 'right', distance: '50px', delay: 200 });
+
+            // Zoom Elements (Cards, Pricing)
+            sr.reveal('.sr-zoom', { scale: 0.85, duration: 1200 });
+
+            // Fade In Elements (Text details)
+            sr.reveal('.sr-fade', { distance: '0px', opacity: 0, duration: 1500 });
+
+            // Staggered Cards (Testimonials)
+            sr.reveal('.sr-card', { interval: 150 });
+
         </script>
 
 </body>
