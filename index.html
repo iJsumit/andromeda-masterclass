@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 
 <head>
     <meta charset="UTF-8">
@@ -48,10 +48,13 @@
     </style>
 </head>
 
-<body class="bg-slate-950 text-slate-200 antialiased selection:bg-purple-500 selection:text-white">
+<!-- Added overflow-x-hidden to body to prevent animation scroll glitch -->
+
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-purple-500 selection:text-white overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="w-full bg-slate-950/80 backdrop-blur-md border-b border-purple-900/30 fixed top-0 z-50">
+    <nav
+        class="w-full bg-slate-950/80 backdrop-blur-md border-b border-purple-900/30 fixed top-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center gap-2 sr-nav">
@@ -206,7 +209,7 @@
     </section>
 
     <!-- Before & After Section -->
-    <section class="py-20 bg-slate-900">
+    <section class="py-20 bg-slate-900 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 sr-fade-up">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Before vs After This Masterclass</h2>
@@ -286,7 +289,7 @@
     </section>
 
     <!-- What You'll Learn -->
-    <section id="program" class="py-20 bg-slate-950">
+    <section id="program" class="py-20 bg-slate-950 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 items-start">
 
@@ -349,7 +352,7 @@
     </section>
 
     <!-- Instructor Section -->
-    <section id="instructor" class="py-20 bg-gradient-to-b from-slate-900 to-slate-950">
+    <section id="instructor" class="py-20 bg-gradient-to-b from-slate-900 to-slate-950 overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold text-white mb-12 sr-fade-up">Learn From Someone Who’s Done It</h2>
 
@@ -461,7 +464,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section id="reviews" class="py-20 bg-slate-950">
+    <section id="reviews" class="py-20 bg-slate-950 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center text-white mb-12 sr-fade-up">What Marketers Say After Learning
                 This</h2>
@@ -750,8 +753,9 @@
                     <p class="text-white font-bold text-lg leading-none">₹99 <span
                             class="text-slate-500 line-through text-xs font-normal">₹599</span></p>
                 </div>
+                <!-- Adjusted padding for mobile screens -->
                 <button onclick="scrollToPricing()"
-                    class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-full font-bold shadow-[0_0_15px_rgba(147,51,234,0.5)] active:scale-95 transition-transform hover:scale-105">
+                    class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full font-bold shadow-[0_0_15px_rgba(147,51,234,0.5)] active:scale-95 transition-transform hover:scale-105">
                     Register Now
                 </button>
             </div>
