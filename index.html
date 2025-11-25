@@ -118,7 +118,16 @@
                         immediately.
                     </p>
 
+
+
+
                     <div class="flex flex-col items-center lg:items-start gap-4">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="calendar-days" class="w-5 h-5 text-purple-400"></i>
+                            <span class="text-slate-300 text-sm md:text-base font-medium tracking-wide">
+                                30 November 2025
+                            </span>
+                        </div>
                         <button onclick="goToPayment()"
                             class="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full focus:outline-none hover:scale-105 shadow-[0_0_30px_rgba(147,51,234,0.6)]">
                             Register Now @ ₹99 <span>
@@ -628,21 +637,58 @@
                     <p class="text-slate-500 text-xl decoration-red-500 line-through">₹599</p>
                 </div>
 
-                <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-8 mb-10 text-left max-w-lg mx-auto">
-                    <div class="flex items-center gap-3">
-                        <i data-lucide="play-circle" class="w-5 h-5 text-purple-400"></i>
-                        <span class="text-slate-300">Live 3-hour masterclass + Q&A</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <i data-lucide="bar-chart-3" class="w-5 h-5 text-purple-400"></i>
-                        <span class="text-slate-300">Step-by-step Andromeda framework</span>
-                    </div>
+                <!-- <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-8 mb-10 text-left max-w-lg mx-auto"> -->
+                <div class="flex items-center gap-3 text-center justify-center mb-4">
+                    <i data-lucide="play-circle" class="w-5 h-5 text-purple-400"></i>
+                    <span class="text-slate-300">Live 3-hour masterclass + Q&A</span>
                 </div>
+                <div class="flex items-center gap-3 text-center justify-center mb-6">
+                    <i data-lucide="bar-chart-3" class="w-5 h-5 text-purple-400"></i>
+                    <span class="text-slate-300">Step-by-step Andromeda framework</span>
+                </div>
+                <!-- </div> -->
 
                 <button onclick="goToPayment()"
-                    class="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white text-xl font-bold rounded-lg shadow-lg transform transition hover:scale-105 mb-4">
+                    class="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white text-xl font-bold rounded-lg shadow-lg transform transition hover:scale-105 mb-1">
                     Register Now & Fix My Campaigns
                 </button>
+
+                <!-- Countdown Timer -->
+                <div class="my-5 flex justify-center gap-3 md:gap-4">
+
+                    <!-- Days -->
+                    <div class="bg-[#111827] border border-[#2A2F45] rounded-lg 
+                px-3 py-2 md:px-6 md:py-4 text-center 
+                w-20 md:w-28">
+                        <div id="cd-days" class="text-xl md:text-3xl font-extrabold text-white">00</div>
+                        <div class="text-[10px] md:text-xs text-slate-400 mt-1 tracking-wide">DAYS</div>
+                    </div>
+
+                    <!-- Hours -->
+                    <div class="bg-[#111827] border border-[#2A2F45] rounded-lg 
+                px-3 py-2 md:px-6 md:py-4 text-center 
+                w-20 md:w-28">
+                        <div id="cd-hours" class="text-xl md:text-3xl font-extrabold text-white">00</div>
+                        <div class="text-[10px] md:text-xs text-slate-400 mt-1 tracking-wide">HOURS</div>
+                    </div>
+
+                    <!-- Mins -->
+                    <div class="bg-[#111827] border border-[#2A2F45] rounded-lg 
+                px-3 py-2 md:px-6 md:py-4 text-center 
+                w-20 md:w-28">
+                        <div id="cd-min" class="text-xl md:text-3xl font-extrabold text-white">00</div>
+                        <div class="text-[10px] md:text-xs text-slate-400 mt-1 tracking-wide">MINS</div>
+                    </div>
+
+                    <!-- Secs -->
+                    <div class="bg-[#111827] border border-[#2A2F45] rounded-lg 
+                px-3 py-2 md:px-6 md:py-4 text-center 
+                w-20 md:w-28">
+                        <div id="cd-sec" class="text-xl md:text-3xl font-extrabold text-[#10FF9F]">00</div>
+                        <div class="text-[10px] md:text-xs text-slate-400 mt-1 tracking-wide">SECS</div>
+                    </div>
+                </div>
+                <!-- Timer Ends  -->
 
                 <p class="text-slate-500 text-sm flex justify-center items-center gap-2">
                     <i data-lucide="clock" class="w-4 h-4"></i> Hurry Up! Only 10 Seats Left
@@ -656,14 +702,14 @@
     <div id="sticky-cta"
         class="fixed bottom-0 left-0 w-full z-[99999] bg-slate-900/95 backdrop-blur-xl border-t border-purple-500/30 py-3 shadow-[0_-5px_25px_rgba(0,0,0,0.6)]">
 
-        <div class="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto flex items-center justify-between md:justify-around px-4 sm:px-6 lg:px-8">
 
             <div class="flex flex-col leading-tight">
                 <span class="text-[10px] text-green-500 font-semibold uppercase tracking-wider animate-pulse">
                     Limited Seats Left
                 </span>
 
-                <div class="flex items-end gap-2">
+                <div class="flex items-center gap-2">
                     <span class="text-white font-bold text-xl sm:text-2xl leading-none">₹99</span>
                     <span class="text-slate-500 line-through text-xs sm:text-sm">₹599</span>
                 </div>
@@ -682,9 +728,6 @@
         // Initialize Lucide Icons
         lucide.createIcons();
 
-        // Dynamic Year
-        document.getElementById('year').textContent = new Date().getFullYear();
-
         function goToPayment() {
             window.location.href = "https://pages.razorpay.com/andromeda-masterclass";
         }
@@ -699,6 +742,41 @@
                 stickyCta.classList.add('translate-y-full');
             }
         });
+
+        // Timer Script 
+        function createCountdown(targetDate, ids) {
+            function updateTimer() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                if (distance < 0) {
+                    ["days", "hours", "min", "sec"].forEach(unit => {
+                        document.getElementById(ids[unit]).innerHTML = "00";
+                    });
+                    return;
+                }
+
+                document.getElementById(ids.days).innerHTML =
+                    Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, "0");
+
+                document.getElementById(ids.hours).innerHTML =
+                    Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, "0");
+
+                document.getElementById(ids.min).innerHTML =
+                    Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, "0");
+
+                document.getElementById(ids.sec).innerHTML =
+                    Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, "0");
+            }
+
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+
+        createCountdown(
+            new Date("Nov 29, 2025 23:59:00").getTime(),
+            { days: "cd-days", hours: "cd-hours", min: "cd-min", sec: "cd-sec" }
+        );
 
         // --- ScrollReveal Animations ---
         const sr = ScrollReveal({
